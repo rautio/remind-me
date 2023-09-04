@@ -4,8 +4,8 @@ import { AlertTitle, Alert, AlertDescription } from "@/components/ui/alert";
 import { Skeleton } from "@/components/ui/skeleton";
 import { CreateCollectionBtn } from "@/components/CreateCollectionBtn";
 import prisma from "@/lib/prisma";
-import { wait } from "@/lib/wait";
 import { SadFace } from "@/components/icons/SadFace";
+import { CollectionCard } from "@/components/CollectionCard";
 
 export default async function Home() {
   return (
@@ -71,8 +71,12 @@ async function CollectionList() {
   }
   return (
     <div>
-      Collections: {collections.length}
       <CreateCollectionBtn />
+      <div className="flex flex-col gap-4 mt-6">
+        {collections.map((collection) => (
+          <CollectionCard key={collection.id} collection={collection} />
+        ))}
+      </div>
     </div>
   );
 }

@@ -36,6 +36,7 @@ import { Button } from "./ui/button";
 import { createCollection } from "@/actions/collection";
 import { toast } from "./ui/use-toast";
 import { ReloadIcon } from "@radix-ui/react-icons";
+import { useRouter } from "next/navigation";
 
 interface Props {
   open: boolean;
@@ -47,12 +48,15 @@ export function CreateCollectionSidebar({ open, onOpenChange }: Props) {
     resolver: zodResolver(createCollectionSchema),
     defaultValues: {},
   });
+
+  const router = useRouter();
   const onSubmit = async (data: createCollectionSchemaType) => {
     console.log("submitted: ", data);
     try {
       await createCollection(data);
       // Close the sheet
       openChangeWrapper(false);
+      router.refresh();
       // Show toast
       toast({
         title: "Success",
