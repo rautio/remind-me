@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-export function layout({ children }: { children: ReactNode }) {
+function layout({ children }: { children: ReactNode }) {
   return (
     <div className="flex min-h-screen w-full flex-col items-center">
       <div className="flex flex-grow w-full justify-center">
