@@ -2,7 +2,7 @@
 
 A simple reminder app built using Next.js, TypeScript, Tailwind and Prisma.
 
-Check out the live app:
+Check out the [live app](https://remind-me-oskari.vercel.app/).
 
 ![Remind Me web app](./images/screenshot.png)
 
