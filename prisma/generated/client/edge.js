@@ -154,6 +154,7 @@ const config = {
     "db"
   ],
   "activeProvider": "sqlite",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
@@ -163,7 +164,8 @@ const config = {
     }
   },
   "inlineSchema": "Ly8gVGhpcyBpcyB5b3VyIFByaXNtYSBzY2hlbWEgZmlsZSwKLy8gbGVhcm4gbW9yZSBhYm91dCBpdCBpbiB0aGUgZG9jczogaHR0cHM6Ly9wcmlzLmx5L2QvcHJpc21hLXNjaGVtYQoKZ2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgPSAicHJpc21hLWNsaWVudC1qcyIKICBvdXRwdXQgICA9ICIuL2dlbmVyYXRlZC9jbGllbnQiCn0KCmRhdGFzb3VyY2UgZGIgewogIHByb3ZpZGVyID0gInNxbGl0ZSIKICB1cmwgICAgICA9IGVudigiREFUQUJBU0VfVVJMIikKfQoKbW9kZWwgQ29sbGVjdGlvbiB7CiAgaWQgSW50IEBpZCBAZGVmYXVsdChhdXRvaW5jcmVtZW50KCkpCiAgbmFtZSBTdHJpbmcKICB1c2VySWQgU3RyaW5nCiAgY29sb3IgU3RyaW5nCiAgY3JlYXRlZEF0IERhdGVUaW1lIEBkZWZhdWx0KG5vdygpKQoKICB0YXNrcyBUYXNrW10KCiAgQEB1bmlxdWUoW25hbWUsIHVzZXJJZF0pCn0KCm1vZGVsIFRhc2sgewogIGlkIEludCBAaWQgQGRlZmF1bHQoYXV0b2luY3JlbWVudCgpKQogIGNvbnRlbnQgU3RyaW5nCiAgdXNlcklkIFN0cmluZwogIGRvbmUgQm9vbGVhbiBAZGVmYXVsdChmYWxzZSkKICBleHBpcmVzQXQgRGF0ZVRpbWU/CiAgY3JlYXRlZEF0IERhdGVUaW1lIEBkZWZhdWx0KG5vdygpKQoKICBjb2xsZWN0aW9uSWQgSW50CiAgQ29sbGVjdGlvbiBDb2xsZWN0aW9uIEByZWxhdGlvbihmaWVsZHM6IFtjb2xsZWN0aW9uSWRdLCByZWZlcmVuY2VzOiBbaWRdLCBvbkRlbGV0ZTogQ2FzY2FkZSkKfQ==",
-  "inlineSchemaHash": "06771b714bf7562000117030b6d3026a1fc92f5971babb413bddc3e1f0d29b1f"
+  "inlineSchemaHash": "06771b714bf7562000117030b6d3026a1fc92f5971babb413bddc3e1f0d29b1f",
+  "noEngine": false
 }
 config.dirname = '/'
 
