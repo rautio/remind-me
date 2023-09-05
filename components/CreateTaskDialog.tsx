@@ -29,6 +29,9 @@ import { Calendar } from "./ui/calendar";
 import { Button } from "./ui/button";
 import { CalendarIcon, ReloadIcon } from "@radix-ui/react-icons";
 import { format } from "date-fns";
+import { createTask } from "@/actions/task";
+import { toast } from "./ui/use-toast";
+import { useRouter } from "next/navigation";
 
 interface Props {
   open: boolean;
@@ -43,11 +46,27 @@ export function CreateTaskDialog({ open, setOpen, collection }: Props) {
       collectionId: collection.id,
     },
   });
+  const router = useRouter();
   const openChangeWrapper = (value: boolean) => {
     setOpen(value);
+    form.reset();
   };
   const onSubmit = async (data: createTaskSchemaType) => {
-    console.log("SBUMITTEDD", data);
+    try {
+      await createTask(data);
+      toast({
+        title: "Success",
+        description: "Task created successfully.",
+      });
+      router.refresh();
+      openChangeWrapper(false);
+    } catch (e) {
+      toast({
+        title: "Error",
+        description: "Unable to create task",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
