@@ -1,6 +1,6 @@
 "use client";
 import React, { useTransition } from "react";
-import { Task } from "@prisma/client";
+import type { Task } from "@prisma/client";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { Checkbox } from "./ui/checkbox";
